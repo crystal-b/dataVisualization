@@ -1,0 +1,25 @@
+
+
+Colleges and universities are producing computer science graduates at rates that are within 5% of the US racial and ethnic breakdown. That is, except for hispanic or latino/a/x students. While it's clear that black and hispanic or latino/a/x students are underrepresented in computer science higher education, the pipeline produces a much higher rate of underrepresented minorities than are being hired by major tech companies. The quantity of diverse candidates isn't an issue. The only other possible issues are the quality of these students or the companies' access to them.
+
+There are some apples to oranges comparisons happening here. To start, the NSF data was gathered in 2012 and the US Census was taken in 2010. By the 2015 Census estimates, all minority populations either stayed the same or increased by less than 2%.
+
+The US Census accounts for all residents, including people who may not be citizens or documented residents. The NSF only provides race and ethnicity breakdowns for US citizens and permanent (documented) residents. There is no way of knowing the exact margin of error when comparing data from these two sources. 
+
+The Census also does not break down race and ethnicities by age, and 37% of the population were either <18 or >65.
+
+grads
+white: 59.4%
+asian: 8.7%
+black: 10.6%
+hispanic: 9.2%
+native: 0.5%
+other: 11.6%
+
+2010 census
+white: 63.7
+asian: 5%
+black: 12.6%
+hispanic: 16.3%
+native: 0.2%
+two or more: 2.9%

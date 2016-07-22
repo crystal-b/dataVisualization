@@ -1,0 +1,19 @@
+[
+	{
+		"Census2010": [
+			{
+				"Recipients": [
+  			  {"race":"All", "graduates":"1,810,647"},
+  			  {"race":"U.S. Citizen and Permanent Resident", "graduates":"1,751,037"},
+  			  {"race":"White", "graduates":"1,132,689"},
+  			  {"race":"Asian or Pacific Islander", "graduates":"118,261"},
+  			  {"race":"Black", "graduates":"172,868"},
+  			  {"race":"Hispanic", "graduates":"176,699"},
+  			  {"race":"American Indian or Alaska Native", "graduates":"10,743"},
+  			  {"race":"Other or Unknown", "graduates":"139,777"},
+  			  {"race":"Temporary Resident", "graduates":"59,610"}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,70 @@
+[
+	{
+		"AllFields": [
+			{
+				"Recipients": [
+  			  {"race":"All", "graduates":"1,810,647"},
+  			  {"race":"U.S. Citizen and Permanent Resident", "graduates":"1,751,037"},
+  			  {"race":"White", "graduates":"1,132,689"},
+  			  {"race":"Asian or Pacific Islander", "graduates":"118,261"},
+  			  {"race":"Black", "graduates":"172,868"},
+  			  {"race":"Hispanic", "graduates":"176,699"},
+  			  {"race":"American Indian or Alaska Native", "graduates":"10,743"},
+  			  {"race":"Other or Unknown", "graduates":"139,777"},
+  			  {"race":"Temporary Resident", "graduates":"59,610"}
+				]
+			}
+		]
+	},
+	{ 
+		"Science & Engineering": [
+			{
+				"Recipients": [
+  			  {"race":"All", "graduates":0},
+  			  {"race":"U.S. Citizen and Permanent Resident", "graduates":0},
+  			  {"race":"White", "graduates":0},
+  			  {"race":"Asian or Pacific Islander", "graduates":0},
+  			  {"race":"Black", "graduates":0},
+  			  {"race":"Hispanic", "graduates":0},
+  			  {"race":"American Indian or Alaska Native", "graduates":0},
+  			  {"race":"Other or Unknown", "graduates":0},
+  			  {"race":"Temporary Resident", "graduates":0}
+				]
+			}
+		]
+	},
+	{ 
+		"All Sciences": [
+			{
+				"Recipients": [
+  			  {"race":"All", "graduates":0},
+  			  {"race":"U.S. Citizen and Permanent Resident", "graduates":0},
+  			  {"race":"White", "graduates":0},
+  			  {"race":"Asian or Pacific Islander", "graduates":0},
+  			  {"race":"Black", "graduates":0},
+  			  {"race":"Hispanic", "graduates":0},
+  			  {"race":"American Indian or Alaska Native", "graduates":0},
+  			  {"race":"Other or Unknown", "graduates":0},
+  			  {"race":"Temporary Resident", "graduates":0}
+				]
+			}
+		] 
+	},
+	{ 
+		"ComputerScience": [
+		  {
+				"Recipients": [
+  			  {"race":"All", "graduates":"47,960", "census2010": "308,745,538"},
+  			  {"race":"U.S. Citizen and Permanent Resident", "graduates":"45,595", "census2010": ""},
+  			  {"race":"White", "graduates":"27,067", "census2010": ""},
+  			  {"race":"Asian or Pacific Islander", "graduates":"3,964", "census2010": ""},
+  			  {"race":"Black", "graduates":"4,847", "census2010": ""},
+  			  {"race":"Hispanic", "graduates":"4,210"},
+  			  {"race":"American Indian or Alaska Native", "graduates":"231", "census2010": ""},
+  			  {"race":"Other or Unknown", "graduates":"5,276", "census2010": ""},
+  			  {"race":"Temporary Resident", "graduates":"2,365", "census2010": ""}
+				]
+			}
+		]
+	}
+]
