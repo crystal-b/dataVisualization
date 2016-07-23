@@ -5,7 +5,7 @@ var fontSize = 14;
 var textColor = 0;
 var yLabel = "Graduates";
 var xLabel = "Race or Ethnicity";
-var yTicks = 15;
+var yTicks = 6;
 var yNumTicks;
 var xTicks;
 var tickLength = 20;
@@ -18,6 +18,9 @@ var useData;
 var maxValue;
 var yMax;
 var yRange = [];
+var percentageMax;
+var gradPercentages = [];
+var gradPercentages2 = [];
 
 
 // function chart() {
@@ -41,14 +44,12 @@ function setup() {
 	//useData = data[0].AllFields[0].Recipients;
   	useData = data[3].ComputerScience[0].Recipients;
 	xTicks = (useData.length) - (xStart + 1);
-	console.log(xTicks);
 }
 
 //draw
 function draw() {
   drawChart();
   drawData();
-
 }
 
 
@@ -64,16 +65,19 @@ function drawData() {
 
 }
 
+
+
 /*** SUB FUNCTIONS ***/
 //bar graph
 function drawBarGraph() {
   var mapped;
-  for(i = 0; i < yTickLabels.length; i++) {
-    console.log(yTickLabels);
+  for(i = 0; i < gradPercentages.length; i++) {
+    console.log(gradPercentages);
     console.log(yRange);
     //I'm not yet sure why I have to have the second start value as 0
     // mapped = map(yTickLabels[i], 0, yRange[0], margin, height - margin * 2);
-    mapped = map(yTickLabels[i], 0, yRange[0], 0, height - margin * 2);
+    /*** TEMP TEST ***/
+    mapped = map(gradPercentages[i], 0, yRange[0], 0, height - margin * 2);
     console.log(mapped);
     mappedHeights.push(mapped);
   }
@@ -110,8 +114,10 @@ function drawText(label, xPos, yPos, txtSize, txtWeight) {
 //draw ticks for y-axis
 function drawYTicks() {
   var tickSpread
-  for( i = 0; i <= yTicks; i++) {
-    tickSpread = margin + ((height - margin * 2)/yTicks)*i;
+  for( i = 0; i < yTicks; i++) {
+    console.log(yTicks);
+    tickSpread = margin + ((height - margin * 2)/yTicks) * i;
+    console.log(tickSpread);
     line(margin - tickLength, tickSpread, margin, tickSpread);
     drawText(yRange[i], margin - margin/2, tickSpread + 3, 10, NORMAL);
   }
@@ -124,7 +130,6 @@ function drawXTicks() {
     tickSpread = margin * 1.6 + ((width - margin * 1.5)/xTicks)*i;
     line(tickSpread, height - margin, tickSpread, height - margin + 20); 
     drawText(xTickLabels[i], tickSpread, 540, 10, NORMAL);
-    console.log(tickSpread);
     barGraph(tickSpread - margin/2, height - margin - mappedHeights[i], mappedHeights[i]);
   }
 }
@@ -138,11 +143,32 @@ function getTickLabels() {
     xTickLabels.push(xValue);
     yTickLabels.push(yValue);
   }
-  findMax(yTickLabels);
-  yMax = roundUp(maxValue, 10000);
-  makeRange(yMax, 2000, yRange);
+  numToPercent();
+  findMax(gradPercentages);
+  yMax = roundUp(maxValue, 10);
+  console.log(yMax);
+  
+  makeRange(yMax, 10, yRange);
+  console.log(yRange);
   yRange.reverse();
+  console.log(yRange);
   yNumTicks = yRange.length;
+  console.log(yNumTicks);
+}
+//take y Values and convert to a percentage
+function numToPercent() {
+  var allGrads = useData[1].graduates;
+  var percentage;
+  allGrads = parseInt(allGrads.replace(/,/g, ""), 10);
+  for( i = 0; i < xTicks; i++) {
+    percentage = (yTickLabels[i]/allGrads) * 100;
+    gradPercentages.push(percentage);
+    gradPercentages2.push(percentage);
+  }
+  percentageMax = roundUp(gradPercentages[0], 10);
+  console.log(gradPercentages);
+  console.log(gradPercentages2);
+  // console.log(percentageMax);
 }
 
 /*** BASIC SUPPORT FUNCTIONS ***/
